@@ -1,0 +1,14 @@
+{
+  "name": "flexapp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "\u001b[A\u001b[A\u001b[D\u001b[B\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[Cupdated names app with flex and css",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.15.3"
+  }
+}

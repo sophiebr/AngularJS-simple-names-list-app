@@ -1,0 +1,82 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <title>SPLIT DIR Names List</title>
+</head>
+
+<style>
+    body {
+        background-color:#969696;
+        font-size: 18px;
+        font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+    .bold_text {
+        font-weight: bold;
+    }
+    .button-class {
+        background:cross-fade();
+        padding: 5px;
+        color:black;
+        font-weight: bold;
+        font-size: 18px;
+        text-align: center;
+        font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        margin-left: 10px;
+        margin-top: 5px;
+        margin-bottom: 5px;
+        border-radius: 5px;
+        border: 1px solid grey;
+        flex-wrap: wrap;
+        flex: auto;
+    }
+
+    .text-flex {
+        font-weight: bold;
+        font-size: 25px;
+        font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        /*margin-top: 250px; sketchy hardcoded value*/
+        flex: auto;
+    }
+
+    .text-box-flex {
+        font-size: 18px;
+        height: 29px;
+        border-radius: 5px;
+        border: 1px solid grey;
+    }
+
+    .flex-container { /*FLEX STUFF*/
+        display: flex;           /* establish flex container */
+        flex-direction: column;  /* make main axis vertical */
+        justify-content: center; /* center items */
+        align-items: center;     /* center items */
+    }
+
+</style>
+
+<body ng-app="namesApp" ng-controller="namesControl" >
+
+    <ul class="flex-container">
+
+        <h1 class="text-flex">Split Directive Names List</h1>
+
+        <form ng-submit="addToNamesList()">
+            <input type="text" ng-model="newNameEntered" class="text-box-flex">
+            <button type="submit" value="add" class="button-class">add <i class="fa fa-plus" aria-hidden="true" style="color:green;"></i></button>
+        </form>
+        <!--<br>
+        <pre>
+            {{namesList | json}}
+        </pre> -->
+        <div ng-repeat="newName in namesList">
+            <!-- <pre>
+                {{newName | json}}
+            </pre> -->
+            <color-directive><bold-directive><deletebutton-directive name-typed="{{newName.nameTyped}}" delete-from-names-list="deleteFromNamesList()"></deletebutton-directive></bold-directive></color-directive>
+        </div>
+
+    </ul>
+
+</body>
+</html>
