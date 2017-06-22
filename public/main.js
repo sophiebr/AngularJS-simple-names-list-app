@@ -8,10 +8,13 @@ var app = angular.module('namesApp', ["ui.router"]);
                 .state('home', {
                     url: '/',
                     templateUrl: 'SeparatingDirectives.html'
+                    // template: '<p>home</p>'
+                    
                 })
                 .state('nextpg', {
                     url: '/nextpg',
                     templateUrl: 'routepg.html'
+                    // template: '<p>nextpg</p>'
                 })
         });
 

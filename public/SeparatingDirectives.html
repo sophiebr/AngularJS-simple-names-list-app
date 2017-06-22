@@ -1,6 +1,30 @@
-﻿<!DOCTYPE html>
-<html>
-
+﻿<!--<!DOCTYPE html>-->
+<!--<script type="text/javascript" src="flexappjs.js"></script>
+<script type="text/javascript" src="main.js"></script>-->
+<div ng-app="app">
+    <div ui-view></div>
+    <script type="text/ng-template" id="SeparatingDirectives.html">
+        <div ng-controller="uiRoutingControl" >  
+        <p>
+             <ul>
+                    <li ng-repeat="setPage(page)"></li>
+            </ul>
+            page1
+        </p>
+        </div>
+    </script>
+    <script type="text/ng-template" id="routepg.html">
+        <div ng-controller="uiRoutingControl">
+        <p>
+             <ul>
+                    <li ng-repeat="page in content"> <a ng-click="setPage(page)">goto {{page}}</a></li>
+            </ul>
+            page2
+        </p>
+        </div>
+    </script> 
+</div>
+<!--
 <head>
     <title>SPLIT DIR Names List</title>
 </head>
@@ -65,18 +89,18 @@
             <input type="text" ng-model="newNameEntered" class="text-box-flex">
             <button type="submit" value="add" class="button-class">add <i class="fa fa-plus" aria-hidden="true" style="color:green;"></i></button>
         </form>
-        <!--<br>
+        <br>
         <pre>
             {{namesList | json}}
         </pre> -->
-        <div ng-repeat="newName in namesList">
+        <!--<div ng-repeat="newName in namesList">-->
             <!-- <pre>
                 {{newName | json}}
             </pre> -->
-            <color-directive><bold-directive><deletebutton-directive name-typed="{{newName.nameTyped}}" delete-from-names-list="deleteFromNamesList()"></deletebutton-directive></bold-directive></color-directive>
-        </div>
+            <!--<color-directive><bold-directive><deletebutton-directive name-typed="{{newName.nameTyped}}" delete-from-names-list="deleteFromNamesList()"></deletebutton-directive></bold-directive></color-directive>-->
+        <!--</div>-->
 
-    </ul>
+    <!--</ul>-->
 
-</body>
-</html>
+<!--</body>-->
+<!--</html>-->
