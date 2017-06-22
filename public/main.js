@@ -2,15 +2,29 @@ var app = angular.module('namesApp', ["ui.router"]);
 
 // app.use(express.static(__dirname + '/routepg.html'));
 // app.use(express.static(__dirname + '/SeparatingDirectives.html'));
-        
 
         app.config(function($stateProvider) {
             $stateProvider
-                .state('test', {
+                .state('home', {
                     url: '/',
                     templateUrl: 'SeparatingDirectives.html'
                 })
+                .state('nextpg', {
+                    url: '/nextpg',
+                    templateUrl: 'routepg.html'
+                })
         });
+
+        app.run(['$state', function($state){
+            $state.transitionTo('home');
+        }])
+
+        app.controller('uiRoutingControl', function($scope, $state){
+            $scope.content = 'nextpg';
+            $scope.setPage = function(page){
+                $state.transitionTo(page);
+            }
+        })
     
     /////////////////////////////////////////////////////////////
 
