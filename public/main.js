@@ -9,15 +9,15 @@ var app = angular.module('app', ["ui.router"]);
                 .state('home', {
                     url: '/home',
                     // templateUrl: 'C:\Users\212617185\flexapp\public\SeparatingDirectives.html'
-                    // templateUrl: 'SeparatingDirectives.html'
-                    template: '<p>home</p>'
+                    templateUrl: 'SeparatingDirectives.html'
+                    // template: '<p>home</p>'
                     
                 })
                 .state('nextpg', {
                     url: '/nextpg',
                     // templateUrl: 'C:\Users\212617185\flexapp\public\routepg.html'
-                    // templateUrl: 'routepg.html'
-                    template: '<p>nextpg</p>'
+                    templateUrl: 'routepg.html'
+                    // template: '<p>nextpg</p>'
                 })
         });
 
