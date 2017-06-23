@@ -6,6 +6,7 @@
 <script type="text/javascript" src="main.js"></script>
 <!--<script src="./system.js"></script>-->
 <!--<script>System.import('main.js')</script>-->
+
 <html>
 
 <head>
@@ -33,13 +34,13 @@
 
 </head>
 
-<body ng-app="app">
+<body ng-app="namesApp">
 
 <!-- NAVIGATION -->
 <nav class="navbar navbar-inverse" role="navigation">
     <ul class="nav navbar-nav">
         <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<button class="nav-button-class" ui-sref="home">&nbspHome&nbsp&nbsp<i class="fa fa-home" aria-hidden="true" style="color:brown;"></i>&nbsp</button>
-        <button class="nav-button-class" ui-sref="nextpg">&nbspNext Page&nbsp&nbsp<i class="fa fa-chevron-right" aria-hidden="true" style="color:brown;"></i><i class="fa fa-chevron-right" aria-hidden="true" style="color:brown;"></i>&nbsp</button>
+        <button class="nav-button-class" ui-sref="next">&nbspNext Page&nbsp&nbsp<i class="fa fa-chevron-right" aria-hidden="true" style="color:brown;"></i><i class="fa fa-chevron-right" aria-hidden="true" style="color:brown;"></i>&nbsp</button>
     </ul>
     </nav>
 
@@ -49,10 +50,6 @@
 
 <!-- MAIN CONTENT -->
 <!-- THIS IS WHERE WE WILL INJECT OUR CONTENT ============================== -->
-<div class="container">
-    <div ui-view></div>
-</div>
 
 </body>
 </html>
-

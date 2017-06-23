@@ -1,43 +1,23 @@
-var app = angular.module('app', ["ui.router"]);
-
-// app.use(express.static(__dirname + '/routepg.html'));
-// app.use(express.static(__dirname + '/SeparatingDirectives.html'));
-
+    var app = angular.module('namesApp', ["ui.router"]);
         app.config(function($stateProvider, $urlRouterProvider) {
-            $urlRouterProvider.otherwise('/home');
+            $urlRouterProvider.otherwise('/');
+
             $stateProvider
-                .state('home', {
-                    url: '/home',
-                    // templateUrl: 'C:\Users\212617185\flexapp\public\SeparatingDirectives.html'
-                    templateUrl: 'SeparatingDirectives.html'
-                    // template: '<p>home</p>'
-                    
+
+                .state("home", {
+                    url: '/',
+                    templateUrl: 'SeparatingDirectives.html',
                 })
-                .state('nextpg', {
-                    url: '/nextpg',
-                    // templateUrl: 'C:\Users\212617185\flexapp\public\routepg.html'
-                    templateUrl: 'routepg.html'
-                    // template: '<p>nextpg</p>'
+                .state("next", {
+                    url: '/next',
+                    templateUrl: 'routepg.html',
                 })
         });
-
-        app.run(['$state', function($state){
-            $state.transitionTo('home');
-        }])
-
-        app.controller('uiRoutingControl', function($scope, $state){
-            $scope.content = 'nextpg';
-            $scope.setPage = function(page){
-                $state.transitionTo(page);
-            }
-        })
-    
-    /////////////////////////////////////////////////////////////
 
     app.controller('namesControl', function ($scope) {
         $scope.namesList = [];
         $scope.addToNamesList = function () {
-            // console.log("entered ADD function");
+            console.log("entered ADD function");
             if ($scope.newNameEntered && $scope.newNameEntered != "") {
                 $scope.namesList.push({ nameTyped: $scope.newNameEntered });
                 // console.log("...and just added " + $scope.newNameEntered);
@@ -49,10 +29,6 @@ var app = angular.module('app', ["ui.router"]);
         $scope.deleteFromNamesList = function () {
             console.log("entered DELETE function");
             $scope.namesList.splice(this.$index,1);
-        }
-
-        $scope.goto = function(sref) {
-            $state.go(sref);
         }
     });
 
@@ -108,5 +84,3 @@ var app = angular.module('app', ["ui.router"]);
             }
         };
     });
-
-    // debugger;
