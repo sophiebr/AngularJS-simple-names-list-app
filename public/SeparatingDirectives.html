@@ -1,7 +1,7 @@
 ﻿<!--<!DOCTYPE html>-->
 <!--<script type="text/javascript" src="flexappjs.js"></script>
 <script type="text/javascript" src="main.js"></script>-->
-<div ng-app="app">
+<!--<div ng-app="app">
     <div ui-view></div>
     <script type="text/ng-template" id="SeparatingDirectives.html">
         <div ng-controller="uiRoutingControl" >  
@@ -23,10 +23,10 @@
         </p>
         </div>
     </script> 
-</div>
-<!--
+</div>-->
+<div>
 <head>
-    <title>SPLIT DIR Names List</title>
+    <title>UI Routing</title>
 </head>
 
 <style>
@@ -93,14 +93,16 @@
         <pre>
             {{namesList | json}}
         </pre> -->
-        <!--<div ng-repeat="newName in namesList">-->
+        <div ng-repeat="newName in namesList">
             <!-- <pre>
                 {{newName | json}}
             </pre> -->
-            <!--<color-directive><bold-directive><deletebutton-directive name-typed="{{newName.nameTyped}}" delete-from-names-list="deleteFromNamesList()"></deletebutton-directive></bold-directive></color-directive>-->
-        <!--</div>-->
+            <color-directive><bold-directive><deletebutton-directive name-typed="{{newName.nameTyped}}" delete-from-names-list="deleteFromNamesList()"></deletebutton-directive></bold-directive></color-directive>
+        </div>
 
-    <!--</ul>-->
+    </ul>
 
-<!--</body>-->
+</body>
 <!--</html>-->
+</div>
+<div ui-view></div>
